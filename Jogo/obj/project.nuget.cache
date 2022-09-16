@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "11CFdDrDc8LpSHiTvLaG8Rw7w282K7eyodNDZlVtF3UcJcAYjkYsxLWNNXgC8x7uii49HsVayvwo5AQy3p0+Mw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\96086\\Desktop\\Projeto 7Days\\Jogo\\Jogo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\96086\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\96086\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\96086\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\96086\\.nuget\\packages\\restsharp\\108.0.1\\restsharp.108.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
