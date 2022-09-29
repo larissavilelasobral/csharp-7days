@@ -187,11 +187,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\96086\\Desktop\\Projeto 7Days\\Jogo\\Jogo.csproj",
+      "projectUniqueName": "C:\\Users\\96086\\Desktop\\csharp-7days\\Jogo\\Jogo.csproj",
       "projectName": "Jogo",
-      "projectPath": "C:\\Users\\96086\\Desktop\\Projeto 7Days\\Jogo\\Jogo.csproj",
+      "projectPath": "C:\\Users\\96086\\Desktop\\csharp-7days\\Jogo\\Jogo.csproj",
       "packagesPath": "C:\\Users\\96086\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\96086\\Desktop\\Projeto 7Days\\Jogo\\obj\\",
+      "outputPath": "C:\\Users\\96086\\Desktop\\csharp-7days\\Jogo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\96086\\AppData\\Roaming\\NuGet\\NuGet.Config",

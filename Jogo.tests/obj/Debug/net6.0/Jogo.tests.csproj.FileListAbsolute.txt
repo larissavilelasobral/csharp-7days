@@ -1,0 +1,6 @@
+C:\Users\96086\Desktop\csharp-7days\Jogo.tests\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Users\96086\Desktop\csharp-7days\Jogo.tests\obj\Debug\net6.0\Jogo.tests.csproj.AssemblyReference.cache
+C:\Users\96086\Desktop\csharp-7days\Jogo.tests\obj\Debug\net6.0\Jogo.tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\96086\Desktop\csharp-7days\Jogo.tests\obj\Debug\net6.0\Jogo.tests.AssemblyInfoInputs.cache
+C:\Users\96086\Desktop\csharp-7days\Jogo.tests\obj\Debug\net6.0\Jogo.tests.AssemblyInfo.cs
+C:\Users\96086\Desktop\csharp-7days\Jogo.tests\obj\Debug\net6.0\Jogo.tests.csproj.CoreCompileInputs.cache

@@ -1,31 +1,61 @@
+using RestSharp;
+using Newtonsoft.Json;
+using Moq;
+
 namespace Tamagotchi.tests;
 
 public class Tests
 {
-    private PokemonService _service;
+  public string json;
 
-    [SetUp]
-    public void Setup()
-    {
-        _service = new PokemonService();
-    }
+  [SetUp]
+  public void Setup()
+  {
+    this.json = @"{
+    ""abilities"": [
+        {
+            ""ability"": {
+                ""name"": ""overgrow"",
+                ""url"": ""https://pokeapi.co/api/v2/ability/65/""
+            },
+            ""is_hidden"": false,
+            ""slot"": 1
+        },
+        {
+            ""ability"": {
+                ""name"": ""chlorophyll"",
+                ""url"": ""https://pokeapi.co/api/v2/ability/34/""
+            },
+            ""is_hidden"": true,
+            ""slot"": 3
+        }
+    ],
+    ""height"": 7,
+    ""is_default"": true,
+    ""weight"": 69,
+    ""name"": ""bulbasaur""
+    }";
+  }
 
-    [Test]
-    public void TestRetornoAPI()
-    {
-        string especie = "bulbasaur";
-        //lib?
-        _service.BuscarCaracteristicasPorEspecie(especie);
-        // https://www.newtonsoft.com/json/help/html/deserializeobject.htm
+  [Test]
+  public void StatusCodeTest()
+  {
+    // arrange
+    var responseJson = JsonConvert.DeserializeObject<RestResponse>(json);
+    string especie = "bulbasaur";
+    var mock = new Mock<RestClient>();
 
-        //var result = response.Content;
-        //PokemonAPI pokemon = JsonSerializer.Deserialize<PokemonAPI>(result);
-        Assert.Pass();
-    }
+    var request = new RestRequest($"{especie}",Method.Get);
 
-    [Test]
-    public void TestRetornoAPI()
-    {
-        
-    }
+    mock.Setup(x => x.Execute(request)).Returns(responseJson);
+
+    PokemonService service = new PokemonService(mock);
+
+    // act
+    service.BuscarCaracteristicasPorEspecie(especie);
+
+    // assert
+    Assert.That(response.StatusCode, Is.EqualTo(System.Net.HttpStatusCode.OK));
+  }
+
 }

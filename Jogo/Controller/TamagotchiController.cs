@@ -1,3 +1,5 @@
+using RestSharp;
+
 namespace Tamagotchi
 {
   public class TamagotchiController
@@ -35,10 +37,12 @@ namespace Tamagotchi
 
     private void MenuDeAdocao()
     {
-      PokemonDomain pokemon = new();
       string especieMascote = this.message.MenuAdocao();
       string opcao = this.message.DesejaSaberMais(especieMascote);
-      pokemon = PokemonService.BuscarCaracteristicasPorEspecie(especieMascote);
+      
+      RestClient client = new RestClient("https://pokeapi.co/api/v2/pokemon/");
+      PokemonService service = new PokemonService(client);
+      PokemonDomain pokemon = service.BuscarCaracteristicasPorEspecie(especieMascote);
 
       switch (opcao)
       {
