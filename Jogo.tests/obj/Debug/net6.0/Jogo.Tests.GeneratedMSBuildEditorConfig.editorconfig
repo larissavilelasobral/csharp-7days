@@ -6,5 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = Jogo.Tests
-build_property.ProjectDir = c:\Users\96086\Desktop\csharp-7days\Jogo.Tests\
+build_property.RootNamespace = Jogo.tests
+build_property.ProjectDir = C:\Users\96086\Desktop\csharp-7days\Jogo.tests\

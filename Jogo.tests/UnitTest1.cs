@@ -7,10 +7,17 @@ namespace Tamagotchi.tests;
 public class Tests
 {
   public string json;
+  public PokemonDomain pokemon;
 
   [SetUp]
   public void Setup()
   {
+
+    this.pokemon = new PokemonDomain();
+    this.pokemon.name = "bulbasaur";
+    this.pokemon.height = 7;
+
+
     this.json = @"{
     ""abilities"": [
         {
@@ -43,19 +50,18 @@ public class Tests
     // arrange
     var responseJson = JsonConvert.DeserializeObject<RestResponse>(json);
     string especie = "bulbasaur";
+
+    var request = new RestRequest($"{especie}",Method.GET);
     var mock = new Mock<RestClient>();
 
-    var request = new RestRequest($"{especie}",Method.Get);
-
-    mock.Setup(x => x.Execute(request)).Returns(responseJson);
-
-    PokemonService service = new PokemonService(mock);
+    mock.Setup(x => x.Execute(request)).Returns(new RestResponse(){Content = this.json});
+    PokemonService service = new PokemonService(mock.Object);
 
     // act
-    service.BuscarCaracteristicasPorEspecie(especie);
+    PokemonDomain result = service.BuscarCaracteristicasPorEspecie(especie);
 
     // assert
-    Assert.That(response.StatusCode, Is.EqualTo(System.Net.HttpStatusCode.OK));
+    Assert.That(result.name, Is.EqualTo(this.pokemon.name));
   }
 
 }

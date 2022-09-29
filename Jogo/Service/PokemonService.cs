@@ -5,7 +5,7 @@ namespace Tamagotchi
 {
   public class PokemonService
   {
-    public RestClient client;
+    public IRestClient client;
 
     public PokemonService(IRestClient client)
     {
@@ -14,14 +14,14 @@ namespace Tamagotchi
     
     public PokemonDomain BuscarCaracteristicasPorEspecie(string especie)
     {
-      var request = new RestRequest($"{especie}",Method.Get);
+      var request = new RestRequest($"{especie}",Method.GET);
 
-      RestResponse response = this.client.Execute(request);
+      IRestResponse response = this.client.Execute(request);
       
-      if (response.StatusCode != System.Net.HttpStatusCode.OK)
-      {
-        Console.WriteLine("Error: " + response.ErrorMessage);
-      }
+      // if (response.StatusCode != System.Net.HttpStatusCode.OK)
+      // {
+      //   Console.WriteLine("Error: " + response.ErrorMessage);
+      // }
 
       var result = response.Content;
       PokemonAPI pokemon = JsonSerializer.Deserialize<PokemonAPI>(result);

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jWHZmEmMkYb7Ht2fkWolgH5X2dUguOHcCCdDdTaJwuY4SscvXju9e/0FN31POqKeYjE+1U8bw23dU4Fbra0Pvg==",
+  "dgSpecHash": "4UrPRP0KXJ2OoNgtI0APBuQpYMzl/bwni2fO0Gr6J/uLWlwLXw8mvaDzLFtdJAKeWm6OFrxka0jQeUQzZNMGWQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\96086\\Desktop\\csharp-7days\\Jogo.tests\\Jogo.tests.csproj",
   "expectedPackageFiles": [
@@ -20,9 +20,20 @@
     "C:\\Users\\96086\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
     "C:\\Users\\96086\\.nuget\\packages\\nunit.analyzers\\3.3.0\\nunit.analyzers.3.3.0.nupkg.sha512",
     "C:\\Users\\96086\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
-    "C:\\Users\\96086\\.nuget\\packages\\restsharp\\108.0.1\\restsharp.108.0.1.nupkg.sha512",
+    "C:\\Users\\96086\\.nuget\\packages\\restsharp\\105.1.0\\restsharp.105.1.0.nupkg.sha512",
     "C:\\Users\\96086\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "C:\\Users\\96086\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'RestSharp 105.1.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "RestSharp",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
