@@ -17,7 +17,8 @@ namespace Tamagotchi
       var request = new RestRequest($"{especie}",Method.GET);
 
       IRestResponse response = this.client.Execute(request);
-      
+      Console.WriteLine("Resposta e resultado aqui!!!");
+      Console.WriteLine(response);
       // if (response.StatusCode != System.Net.HttpStatusCode.OK)
       // {
       //   Console.WriteLine("Error: " + response.ErrorMessage);
